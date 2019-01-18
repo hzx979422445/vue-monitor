@@ -42,14 +42,23 @@ export default {
           },
           left: "center"
         },
+        grid: {
+          left:'15%'
+        },
         tooltip: {},
         xAxis: {
           splitLine: { show: false },
+          name:'时间',
+          nameLocation:'center',
+          nameGap:30,
           boundaryGap: false,
           data: []
         },
         yAxis: {
-          type: "value"
+          type: "value",
+          name: '幅值(mv)',
+          nameLocation:'center',
+          nameGap:40
         },
         series: [
           {
@@ -73,14 +82,23 @@ export default {
           },
           left: "center"
         },
+        grid: {
+          left:'15%'
+        },
         tooltip: {},
         xAxis: {
           splitLine: { show: false },
+          name:'相位(°)',
+          nameLocation:'center',
+          nameGap:30,
           boundaryGap: false,
           data: []
         },
-        yAxis: {
-          type: "value"
+        yAxis: {         
+          type: "value",
+          name: '幅值(mv)',
+          nameLocation:'center',
+          nameGap:40
         },
         series: [
           {
