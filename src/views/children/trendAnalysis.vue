@@ -43,15 +43,19 @@ export default {
           left: "center"
         },
         grid: {
-          left:'15%'
+          left:'15%',
+          bottom:70
         },
         tooltip: {},
         xAxis: {
           splitLine: { show: false },
           name:'时间',
           nameLocation:'center',
-          nameGap:30,
+          nameGap:50,
           boundaryGap: false,
+          axisLabel: {
+            rotate:40
+          },
           data: []
         },
         yAxis: {
