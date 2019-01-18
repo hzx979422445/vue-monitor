@@ -26,18 +26,14 @@ export default {
     width: {
       handler(val, oldVal) {
         this.$nextTick(() => {
-          this.chartsArr.forEach((item, index) => {
-            item.resize();
-          });
+          this.myChart.resize();
         });
       }
     },
     chartData: {
       handler(val, oldVal) {
         this.$nextTick(() => {
-          this.chartsArr.forEach((item, index) => {
-            item.setOption(this.chartsDataArr[index]);
-          });
+          this.myChart.setOption(this.chartData);
         });
       },
       deep: true
@@ -45,18 +41,15 @@ export default {
   },
   data() {
     return {
-      chartsArr: [],
-      chartsDataArr: []
+      myChart: {}
     };
   },
   methods: {
     drawChart() {
-      var myChart = echarts.init(this.$refs.echarts);
-      this.chartsArr.push(echarts.init(this.$refs.echarts));
-      this.chartsDataArr.push(this.chartData);
+      this.myChart = echarts.init(this.$refs.echarts);
       // 绘制图表
-      myChart.setOption(this.chartData);
-      window.addEventListener("resize", myChart.resize);
+      this.myChart.setOption(this.chartData);
+      window.addEventListener("resize", this.myChart.resize);
     }
   },
   computed: {},

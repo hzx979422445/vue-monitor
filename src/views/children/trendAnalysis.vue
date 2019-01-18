@@ -22,8 +22,12 @@
       <div class="chartsItem">
         <e-charts :chartData="optionTwo" :height="height" :width="width"></e-charts>
       </div>
-      <div class="chartsItem"></div>
-      <div class="chartsItem"></div>
+      <div class="chartsItem">
+           <e-charts :chartData="optionOne" :height="height" :width="width"></e-charts>
+      </div>
+      <div class="chartsItem">
+         <e-charts :chartData="optionOne" :height="height" :width="width"></e-charts>
+      </div>
     </div>
   </div>
 </template>
